@@ -1,0 +1,26 @@
+{
+	"main": "index.js",
+	"type": "commonjs",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "npx prisma db push && node ."
+	},
+	"engines": {
+		"node": ">=18.17.0"
+	},
+	"prisma": {
+		"schema": "src/prisma/schema.prisma"
+	},
+	"dependencies": {
+		"@discordjs/rest": "^2.4.0",
+		"@prisma/client": "^5.21.0",
+		"chalk-advanced": "^1.0.7",
+		"discord-api-types": "^0.37.102",
+		"discord-xp": "^1.1.16",
+		"discord.js": "^14.16.3",
+		"dotenv": "^16.4.5"
+	},
+	"devDependencies": {
+		"prisma": "^5.21.0"
+	}
+}

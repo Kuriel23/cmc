@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DB")
+}
+
+model levels {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  v           Int?     @map("__v")
+  guildID     String
+  lastUpdated DateTime @default(now()) @db.Date
+  level       Int      @default(0)
+  userID      String
+  xp          Int      @default(0)
+}
+
+model user {
+  id       String   @id @map("_id")
+  dutyDate DateTime @default(now()) @db.Date
+  duty     Int      @default(3)
+}
